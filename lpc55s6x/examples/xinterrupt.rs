@@ -5,7 +5,7 @@
 use lpc55s6x::{Interrupt_0, Interrupt_1, BLUE, RED};
 use panic_halt as _;
 
-#[rtfm::app(device = lpc55s6x, cores = 2)]
+#[rtic::app(device = lpc55s6x, cores = 2)]
 const APP: () = {
     #[init(core = 0)]
     fn init0(_: init0::Context) {

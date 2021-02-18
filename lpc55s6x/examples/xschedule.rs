@@ -7,7 +7,7 @@ use panic_halt as _;
 
 const PERIOD: u32 = 8_000_000; // about one second
 
-#[rtfm::app(device = lpc55s6x, cores = 2, monotonic = lpc55s6x::CTIMER0)]
+#[rtic::app(device = lpc55s6x, cores = 2, monotonic = lpc55s6x::CTIMER0)]
 const APP: () = {
     #[init(core = 0, spawn = [ping])]
     fn init0(c: init0::Context) {

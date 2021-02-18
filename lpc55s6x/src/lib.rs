@@ -10,7 +10,7 @@ use core::{
 };
 
 use bare_metal::Nr;
-use rtfm::{Fraction, Monotonic, MultiCore};
+use rtic::{Fraction, Monotonic, MultiCore};
 
 // the vector table of both cores have the exact same layout
 pub use Interrupt_0 as Interrupt_1;

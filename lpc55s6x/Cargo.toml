@@ -9,10 +9,7 @@ version = "0.0.0-alpha.0"
 bare-metal = "0.2.4"
 r0 = "0.2.2"
 
-[dependencies.cortex-m-rtfm]
-branch = "heterogeneous"
-features = ["homogeneous"]
-git = "https://github.com/japaric/cortex-m-rtfm"
+cortex-m-rtic = {version="0.5.5", features=["homogeneous"]}
 
 [dev-dependencies]
 # inline-asm is a workaround for rust-embedded/cortex-m-rt#156

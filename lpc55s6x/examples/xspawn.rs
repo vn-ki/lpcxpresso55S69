@@ -5,7 +5,7 @@
 use lpc55s6x::{BLUE, RED};
 use panic_halt as _;
 
-#[rtfm::app(device = lpc55s6x, cores = 2)]
+#[rtic::app(device = lpc55s6x, cores = 2)]
 const APP: () = {
     #[init(core = 0, spawn = [ping])]
     fn init0(c: init0::Context) {
